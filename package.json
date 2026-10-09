@@ -1,0 +1,30 @@
+{
+  "name": "sleekflow-playwright-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "^22.13.0 || >=24"
+  },
+  "scripts": {
+    "bddgen": "bddgen",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "bddgen && playwright test",
+    "test:smoke": "bddgen && playwright test --grep @smoke",
+    "test:auth": "bddgen && playwright test --grep @auth",
+    "test:report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "1.64.0",
+    "@types/node": "^22.20.5",
+    "eslint": "^10.12.0",
+    "eslint-plugin-playwright": "^2.12.1",
+    "playwright-bdd": "^9.2.1",
+    "prettier": "^3.9.9",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.71.1"
+  }
+}
